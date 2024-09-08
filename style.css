@@ -1,0 +1,522 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --netflix-red-color : #e50914;
+    --blue-color : #0071eb;
+    --font-color : #ffffff;
+    --main-bg-color : #232323;
+    --secondary-bg-color : #000000;
+    --faq-section-color : #2d2d2d;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
+}
+.header{
+    background-image: linear-gradient(170deg, rgba(0, 0, 0, 0.8) 20%,rgba(0,0,0,0.5)60%, rgba(0, 0, 0, 0.8) 85%), url(./media/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left;
+    width: 100%;
+    height: 92vh;
+    position: relative;
+}
+.headertop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 170px;
+   
+}
+
+.headertop img{
+    width: 200px;
+    height: 78px;
+}
+
+.headerInputs{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding-right: 20px;
+}
+ #lang{
+    display: flex;
+    height: 30px;
+    width: 120px;
+    background-color: transparent;
+    color: var(--font-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    padding:2px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#lang option{
+    background-color: var(--secondary-bg-color);
+}
+
+.headerInputs button{
+    display: flex;
+    width: 80px;
+    height: 35px;
+    background-color: var(--netflix-red-color);
+    color: var(--font-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    padding:2px 7px;
+
+}
+
+.headerContent{
+    position: absolute;
+    top: 36%;
+    left: 19%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+}
+.headerContent h3{
+    color: var(--font-color);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+.headerContent p{
+    color: var(--font-color);
+    font-size: 1.6rem;
+    font-weight: 100;
+
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.inputs #email{
+    height: 60px;
+    width: 400px;
+    text-align:start;
+    padding: 2px 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: #000000a5;
+    color: var(--font-color);
+    font-size: 1.3rem;
+
+}
+.inputs ::placeholder{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--font-color);
+
+}
+.inputs #submit{
+    height: 60px;
+    width: 250px;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--netflix-red-color);
+    color: var(--font-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.inputs #submit:hover , .headerInputs button:hover{
+    background-color: #c11119;
+}
+.inputs #submit span{
+    position: relative;
+    top: 3.5px;
+    font-weight:normal!important;
+}
+
+
+.section1, .section2, .section3, .section4{
+    width: 100%;
+    min-height: 570px;
+    background-color: var(--secondary-bg-color);
+    margin-top: 8px ;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 72px 165px 72px;
+
+}
+.textside{
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+
+}
+.textside h3{
+    font-size: 3.1rem;
+    font-weight:750; 
+}
+.textside p{
+    font-size: 1.44rem;
+    font-weight: 500;
+}
+
+.section1 img, .section2 img, .section3 img, .section4 img{
+    height: 480px;
+    width: 640px;
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 570px;
+    background-color: var(--secondary-bg-color);
+    margin-top: 8px;
+    padding: 70px;
+    gap:35px;
+}
+.faq h3{
+    color: var(--font-color);
+    font-size: 2.9rem;
+    font-weight: 750;
+}
+.questions{
+    color: var(--font-color);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 8px;
+}
+.questions details summary{
+    background-color: var(--faq-section-color);
+    width: 1200px;
+    height: 80px;
+    padding: 24px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none; 
+}
+.questions details summary:hover{
+    background-color: #414141;
+}
+.questions details[open] span{
+    transform: rotate(45deg);
+}
+.questions details summary span{
+    font-size: 3.1rem !important;
+    font-weight: normal !important;
+   
+}
+.questions details[open] .content{
+    width: 1200px;
+    min-height: 80px;
+    background-color: var(--faq-section-color);
+    color: var(--font-color);
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px;
+    font-size: 1.45rem;
+    
+}    
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    gap: 25px;
+    padding: 30px 10px;
+}
+.signup p{
+    font-size: 1.5rem;
+}
+
+.footeritems{
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--secondary-bg-color);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 80px  180px ;
+    color: var(--font-color);
+
+}
+.footeritems a{
+    color: var(--font-color);
+}
+.quickLinks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 270px;
+}
+
+.part1, .part2, .part3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+}
+
+@media screen and (max-width:600px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--main-bg-color);
+        overflow-x: hidden;
+    }
+
+    .header{
+        background-image: linear-gradient(170deg, rgba(0, 0, 0, 0.8) 20%,rgba(0,0,0,0.5)60%, rgba(0, 0, 0, 0.8) 85%), url(./media/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .headertop{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+    }
+    .headertop img{
+        width: 120px;
+        height: 50px;
+    }
+    .headerInputs{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding-right: 15px;
+        gap: 8px;
+    }
+    #lang{
+        height: 30px;
+        width: 65px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+
+    .headerInputs button{
+        height:30px;
+        width: 75px;
+    }
+    .headerContent{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 115px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align:center;
+        padding: 0px 20px;
+      
+    }
+    .headerContent h3{
+        font-size: 1.9rem;
+    }
+    .headerContent p{
+        font-size: 1.1rem;
+        padding: 0px 24px;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+    .inputs #email{
+        height: 50px;
+        width: 320px;
+    }
+    .inputs ::placeholder{
+        font-weight: 0;
+        font-size: 1.1rem;
+        color: #ffffff9a;    
+    }
+
+    .inputs #submit{
+        height: 45px;
+        width: 160px;
+        font-size: 1.1rem;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+    }
+    .inputs #submit span{
+        top: 0px;
+    }
+    .inputs #submit:hover , .headerInputs button:hover{
+        background-color: #c11119;
+    }
+
+    .section1, .section3{
+        min-height: 450px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 56px 0px;     
+    }
+    .section2, .section4{
+        min-height: 450px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 56px 0px;
+    }
+    .textside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        text-align: center;
+    }
+    .textside h3{
+        font-size: 2.0rem;
+    }
+    .textside p{
+        font-size: 1.1rem;
+        
+    }
+
+    .section1 img, .section2 img, .section3 img, .section4 img{
+        height: 280px;
+        width: 380px;
+        flex-wrap: wrap;
+    }
+
+    .faq{
+        width: 100%;
+        min-height: 450px;
+        padding:56px 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+    .faq h3{
+        width: 100%;
+        font-size: 2.0rem;
+        padding: 0;
+    }
+    .questions{
+      width: 100%;
+      align-items: center;
+    }
+    .questions details summary{
+        width: 380px;
+        height: 70px;
+        font-size: 1.1rem;      
+    }
+    .questions details summary:hover{
+        background-color: #414141;
+    }
+    .questions details[open] span{
+        transform: rotate(45deg);
+    }
+    .questions details summary span{
+        font-size: 1.6rem !important;
+    }
+    .questions details[open] .content{
+        width: 380px;
+        min-height: 100px;
+        font-size: 1.2rem;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .signup p{
+        font-size: 1.1rem;
+        padding: 0 45px;
+    }
+    .footeritems{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 27px;
+        padding: 35px;
+        color: #ffffffb3;
+    }
+    .footeritems a{
+        color: #ffffffb3;
+    }
+    .quickLinks{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap:15px;
+        
+        
+    }
+    .footeritems #lang{
+        width: 132px;
+        height: 32px;
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+    
+
+}
+
